@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title> CS 261 Projects</title>
+        <link rel="stylesheet" href="style.css">
+        <script type="text/javascript" src="prj01.js"></script>
+    </head>
+    <body>
+        <div id="header"> Projects - Basic Fluency</div>
+        <div class="row">
+            <div class="containerLeft">
+                <h1>Variables</h1>
+                <p> Click to fill the variables with data of their type.</p>
+                <p id="intVar">Int </p>
+                <p id="fltVar">Float </p>
+                <p id="strVar">String </p>
+                <button onclick="fillVariables()">Fill Variables </button>
+                <button onclick="resetVariables()">Reset</button>
+            </div>
+            <div class="containerRight">
+                <h1>Parameters</h1>
+                <p> Please type what you would like to pass into the display function</p>
+                <input id='p'>
+                <p id="displayParam">Parameter</p>
+                <button onclick="displayParameter(document.getElementById('p').value)">Fill Variables </button>
+            </div>
+        </div>
+        <div class="row">
+            <div class="containerLeft">
+                <h1>Conditionals</h1>
+                <p> Enter a number between 1 and 10.  Any other input will result in an error</p>
+                <input id="conditional">
+                <p id="displayInput">Input</p>
+                <button onclick="checkInput()">Check</button>
+            </div>
+            <div class="containerRight">
+                <h1>Loops</h1>
+                <p> Click to start looping throught the letters of the alphabet.</p>
+                <p id="displayAlpha"></p>
+                <button onclick="loopAlphabet()">Fill Variables </button>
+            </div>
+        </div>
+        <div class="row">
+            <div class="containerLeft">
+                <h1>Arrays</h1>
+                <p> Please type what you would like to add to the array.</p>
+                <input id="arrayInput">
+                <p id="displayArray"></p>
+                <button onclick="pushArrayInput()">Add</button>
+            </div>
+            <div class="containerRight">
+                <h1>Associative Arrays</h1>
+                <p> Associative Arrays (named index) are NOT supported in JavaScript.  </p>
+            </div>
+        </div>
+        <div class="spacer"></div>
+        <div class="footer"></div>
+    </body>
+</html>

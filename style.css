@@ -1,5 +1,6 @@
 body{
     margin: 0px;
+    background-color: #e8e8f0;
 }
 #header {
     background-color: #333f50;
@@ -23,4 +24,42 @@ body{
     background-color: #333f50;
     color:white;
     cursor: pointer;
+}
+
+.containerLeft{
+    padding: 5px;
+    margin: 2% 4% 0% 16.5%; 
+    text-align: center;
+    width: 33%;
+    background-color: white;
+    box-shadow:  0px 0px 5px 6px #ccc;
+}
+
+.containerRight{
+    float: right;
+    padding: 5px;
+    margin: 2% 16.5% 0% 4%; 
+    text-align: center;
+    width: 33%;
+    background-color: white;
+    box-shadow:  0px 0px 5px 6px #ccc;
+}
+
+h1{
+    font-family: Calibri;
+    font-size: 28px;
+}
+
+.row{
+    display: flex;
+    margin-bottom: 5px;
+}
+
+.spacer{
+    height: 50px;
+}
+
+.footer{
+    height: 150px;
+    background-color: black;
 }
