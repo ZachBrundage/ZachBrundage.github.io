@@ -45,3 +45,17 @@ function pushArrayInput(){
     inputArray.push(strInput);
     document.getElementById("displayArray").innerHTML = inputArray;
 }
+
+var assocArray = {"dog" : 1, "cat" : 2, "bird" : 3};
+
+function selectImage(){
+    var input = document.getElementById("assocArrayInput").value;
+    if (assocArray[input] == 1)
+        document.getElementById("arrayPic").src = "dog.jpg";
+    else if (assocArray[input] == 2)
+        document.getElementById("arrayPic").src = "cat.jpg";
+    else if (assocArray[input] == 3)
+        document.getElementById("arrayPic").src = "bird.jpg";
+    else
+        document.getElementById("arrayPic").src = "";
+}
