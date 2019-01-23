@@ -24,6 +24,7 @@ class Instructor extends Contact{
         console.log("Email: " + this.email);
         console.log("Department: " + this.department);
         console.log("Course: " + this.course);
+        document.getElementById("iResponse").innerHTML = "Check Console!";
     }
 }
 
