@@ -3,7 +3,7 @@ var url = "prj04.txt";
 
 xmlHttp.onreadystatechange = function () {
     if (this.readyState == 4 && this.status ==200){
-        var galley = JSON.parse(this.responseText);
+        var gallery = JSON.parse(this.responseText);
         display(gallery);
     }
 };

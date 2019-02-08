@@ -1,7 +1,7 @@
 [
 {
 "title": "Bird Pic",
-"file": "bird.jpg
+"file": "bird.jpg"
 },
 {
 "title": "Cat Pic",
@@ -9,6 +9,6 @@
 },
 {
 "title": "Dog Pic",
-"file": "dof.jpg
+"file": "dog.jpg"
 }
 ]
