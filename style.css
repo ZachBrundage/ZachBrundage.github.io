@@ -46,8 +46,9 @@ body{
 }
 
 h1{
-    font-family: Calibri;
-    font-size: 28px;
+    font-family: Verdana;
+    font-size: 25px;
+    color: black;
 }
 
 .row{
@@ -76,4 +77,8 @@ a:hover {
 
 .prj02Body{
     text-align: center;
+}
+
+p {
+    font-family: Verdana;
 }
