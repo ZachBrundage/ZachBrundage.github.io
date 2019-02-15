@@ -37,14 +37,7 @@ function loopAlphabet(){
     }
 }
 
-var inputArray = [];
 
-function pushArrayInput(){
-    var input = document.getElementById("arrayInput").value;
-    var strInput = input.toString();
-    inputArray.push(strInput);
-    document.getElementById("displayArray").innerHTML = inputArray;
-}
 
 var assocArray = {"dog" : 1, "cat" : 2, "bird" : 3};
 

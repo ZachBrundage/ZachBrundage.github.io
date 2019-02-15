@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel="stylesheet" href="style.css">
+        <script src="prj06.js" type="text/javascript"></script>
+    </head>
+    <body>
+        <div id="header"> Projects - Basic Fluency - DOM Manipulation</div>
+        <div class="row">
+            <div class="fixedContainerLeft">
+                <h1>Create To Do List</h1>
+                <input type="text" value="Title" id="Title"><br><br>
+                <input type="text" value="Priority" id="Priority"><br><br>
+                <input type="text" value="Due Date" id="dueDate"><br><br>
+                <textarea id="desc">Description</textarea><br><br>
+                <button onclick="createItemAtBottom()">Add To Bottom </button>
+                <p>OR</p>
+                <button onclick="createItemAtTop()">Add To Top</button>
+            </div>
+            <div class="containerRight" id="list">
+                <h1>To Do List</h1>
+            </div>
+        </div>
+    </body>
+</html>

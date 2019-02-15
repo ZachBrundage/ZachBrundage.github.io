@@ -33,21 +33,43 @@ function getArray() {
     document.getElementById("displayArray").innerHTML = arr;
 }
 
+var assocArray = {"dog" : 1, "cat" : 2, "bird" : 3};
+
+function setImage(){
+    var input = document.getElementById("assoc").value;
+    if (assocArray[input] == 1)
+        localStorage.setItem("url", "dog.jpg");
+    else if (assocArray[input] == 2)
+        localStorage.setItem("url", "cat.jpg");
+    else if (assocArray[input] == 3)
+        localStorage.setItem("url", "bird.jpg");
+    else
+        localStorage.setItem("url", "");
+    alert("Sent to Local Storage!");
+}
+
+function getImage() {
+
+    var url = localStorage.getItem("url");
+    document.getElementById("assocImg").src = url;
+}
+
 function setUser() {
     
     var username = document.getElementById("username").value;
-    var password = document.getElementById("password").value;
+    var password = document.getElementById("pass").value;
     var userObj = {
         uName: username, 
         pass: password
     };
     var json = JSON.stringify(userObj);
-    localStorage.setItem("user", jsonFile);
+    localStorage.setItem("user", json);
+    alert("Created User and Sent to Storage!");
 }
 
 function getUser() {
     
-    var jsonFile = localStorage.getItem("JSON");
+    var jsonFile = localStorage.getItem("user");
     var obj = JSON.parse(jsonFile);
-    document.getElementById("displayUser").innerHTML = 
+    document.getElementById("displayUser").innerHTML = "Username: " + obj.uName + "<br>" + "Passwrd: " + obj.pass;
 }

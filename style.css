@@ -13,14 +13,12 @@ body{
     font-size: 32px;
 }
 
-.list{
-    text-decoration: none;
-    color: black;
-    padding: 15px 10px;
-    width: 33%;
+li{
+    padding: 15px 15px;
+    list-style-type: none;
 }
 
-.list:hover{
+li:hover{
     background-color: #333f50;
     color:white;
     cursor: pointer;
@@ -33,6 +31,35 @@ body{
     width: 33%;
     background-color: white;
     box-shadow:  0px 0px 5px 6px #ccc;
+}
+
+.fixedContainerLeft{
+    padding: 5px;
+    margin: 2% 4% 0% 16.5%; 
+    text-align: center;
+    width: 33%;
+    background-color: white;
+    box-shadow:  0px 0px 5px 6px #ccc;
+    height: 400px;
+
+}
+
+.containerCenter{
+    padding: 5px;
+    margin: 2% 4% 0% 33%; 
+    text-align: center;
+    width: 33%;
+    background-color: white;
+    box-shadow:  0px 0px 5px 6px #ccc; 
+}
+
+.listContainerCenter{
+    padding: 5px;
+    margin: 2% 4% 0% 12.5%; 
+    text-align: center;
+    width: 75%;
+    background-color: white;
+    box-shadow:  0px 0px 5px 6px #ccc; 
 }
 
 .containerRight{
@@ -67,12 +94,13 @@ h1{
 }
 
 a {
+    
     text-decoration: none;
     color: black;
 }
 
-a:hover {
-    color: white;
+.codeLink:hover{
+    color:black;
 }
 
 .prj02Body{
@@ -82,3 +110,13 @@ a:hover {
 p {
     font-family: Verdana;
 }
+
+.listText {
+    font-family: Verdana;
+    text-align: left;
+}
+
+h3, .expl {
+    text-align: left;
+}
+
