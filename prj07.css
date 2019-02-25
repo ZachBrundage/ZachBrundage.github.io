@@ -1,0 +1,32 @@
+#anim {
+    position: relative;
+    background-color: red;
+    width: 10px;
+    height: 10px;
+    border-radius: 50px;
+    animation-name: animate;
+    animation-duration: 10s;
+    animation-iteration-count: infinite;
+    left: 0%;
+}
+
+@keyframes animate {
+    0% {left: 0%;}
+    50% {left: 95%;}
+    100% {left: 0%;}
+}
+
+#trans {
+    position: relative;
+    background-color: red;
+    width: 10px;
+    height: 10px;
+    border-radius: 50px;
+    left: 50%;
+    transition: width 2s, height 2s;
+}
+
+#trans:hover {
+    width: 100px;
+    height: 300px;
+}
