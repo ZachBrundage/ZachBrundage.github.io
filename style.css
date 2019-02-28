@@ -120,3 +120,7 @@ h3, .expl {
     text-align: left;
 }
 
+canvas {
+    border: 1px solid black;
+}
+
