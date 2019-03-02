@@ -1,32 +1,37 @@
-#anim {
+#animated {
     position: relative;
     background-color: red;
-    width: 10px;
+    width: 80px;
     height: 10px;
     border-radius: 50px;
     animation-name: animate;
-    animation-duration: 10s;
+    animation-duration: 5s;
     animation-iteration-count: infinite;
+    left: 0%;
+}
+
+#static {
+    position: relative;
+    background-color: red;
+    width: 80px;
+    height: 10px;
+    border-radius: 50px;
     left: 0%;
 }
 
 @keyframes animate {
     0% {left: 0%;}
-    50% {left: 95%;}
+    50% {left: 85%;}
     100% {left: 0%;}
 }
 
-#trans {
+#transition {
     position: relative;
     background-color: red;
-    width: 10px;
+    width: 80px;
     height: 10px;
     border-radius: 50px;
-    left: 50%;
+    left: 0%;
     transition: width 2s, height 2s;
 }
 
-#trans:hover {
-    width: 100px;
-    height: 300px;
-}
