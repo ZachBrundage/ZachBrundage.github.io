@@ -64,3 +64,9 @@ function iterate() {
     var b = Math.floor((Math.random() * 255) + 1);
     this.style.backgroundColor = "rgb(" + r + ", " + g + ", " + b + ")";
 }
+
+function startTrans() {
+    var div = document.getElementById("div5");
+    div.style.backgroundColor = "red";
+    div.addEventListener("transitionend", iterate);
+}

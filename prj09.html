@@ -10,41 +10,49 @@
         <div class="row">
             <div class="containerLeft">
                 <h1>On Click</h1>
+                <p>Rectangle will change color on click.</p>
                 <div id="div0" onclick="onClick()"></div>
             </div>
             <div class="containerRight">
                 <h1>On Mouse Over/Out</h1>
+                <p>Rectangle will change color on mouse over / out.</p>
                 <div id="div1" onmouseover="mouseOver()" onmouseout="mouseOut()"></div>
             </div>
         </div>
         <div class="row">
             <div class="containerLeft">
                 <h1>On Key Down</h1>
+                <p>Input field will change color on key down.</p>
                 <input type="text" id="input" onkeydown="onKeyDown()">
             </div>
             <div class="containerRight">
                 <h1>On Load</h1>
+                <p>One of three images are randomly selected on page load.</p>
                 <img id="img" >
             </div>
         </div>
         <div class="row">
             <div class="containerLeft">
                 <h1>On Touch Begin</h1>
+                <p>Rectangle will change color on touch and will revert back to white on touch end.</p>
                 <div id="div2" ontouchstart="onTouch()" ontouchend="offTouch()"></div>
             </div>
             <div class="containerRight">
                 <h1>On Touch Move</h1>
+                <p>Rectangle will change color while you swipe across, and will revert to white when you stop.</p>
                 <div id="div3" ontouchmove="onMove()" ontouchend="offMove()"></div>
             </div>
         </div>
         <div class="row">
             <div class="containerLeft">
                 <h1>Animation</h1>
+                <p> Click the rectangle to begin the animation.  There is an event listener that will change the rectangle color on each animation iteration.</p>
                 <div id="div4" onclick="start()"></div>
             </div>
             <div class="containerRight">
-                <h1>On Touch Move</h1>
-                <div id="div3" ontouchmove="onMove()" ontouchend="offMove()"></div>
+                <h1>Transition</h1>
+                <p> Click the rectangle to begin the background color transition.  There is an event listener that triggers a new transition to a random color.</p>
+                <div id="div5" onclick="startTrans()"></div>
             </div>
         </div>
         <div class="spacer">
