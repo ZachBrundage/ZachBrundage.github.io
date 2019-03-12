@@ -1,9 +1,11 @@
 #solarSystem {
     height: 500px;
-    border-radius: 290px;
+    border-radius: 650px;
+    width: 85%;
     border: .5px solid black;
     position: relative;
     background-color: rgb(20,20,20);
+    margin-left:7.5%
 }
 
 .planet {
