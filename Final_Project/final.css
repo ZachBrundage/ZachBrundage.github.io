@@ -27,6 +27,7 @@ body{
     padding: 20px;
     border: none;
     display: none;
+    background-color: white;
 }
 
 #next_One {
@@ -36,5 +37,5 @@ body{
     margin-top: 15px;
     margin-left: 30%;
     display: none;
-    transition: display 2s;
+    background-color: white;
 }
