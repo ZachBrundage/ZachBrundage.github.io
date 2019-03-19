@@ -8,12 +8,6 @@ body{
     margin-top: 15px;
 }
 
-.quizBtn_One:hover {
-    border: 1px solid black;
-    background-color: darkseagreen;
-    color: white;
-}
-
 .welcome {
     text-align: center;
     font-family: Helvetica;
