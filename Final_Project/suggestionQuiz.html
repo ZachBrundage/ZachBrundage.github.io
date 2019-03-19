@@ -8,12 +8,13 @@
     </head>
     <body>
         <h1 class="welcome">Welcome</h1>
-        <h1 id="exp">Select Your Snakekeepng Experience Level</h1>
+        <h1 id="exp">Select Experience</h1>
         <button class="quizBtn_One" onclick="selectOptOne(this)">I already own a snake</button>
         <button class="quizBtn_One" onclick="selectOptTwo(this)">I am preparing to purchase a snake</button>
         <button id="next_One" onclick="hideOne()" >Next</button>
-        <button class="quizBtn_SelectExp">I am preparing to purchase a snake</button><br><br>
-        <button class="quizBtn_SelectExp">I am preparing to purchase a snake</button><br><br>
-        <button class="quizBtn_SelectExp">I am preparing to purchase a snake</button><br><br>
+        <button class="quizBtn_SelectExp" onclick="selectBeginner(this)">Beginner: This will be my first snake.</button>
+        <button class="quizBtn_SelectExp" onclick="selectIntermediate(this)">Intermediate: I have some experience with snakes.</button>
+        <button class="quizBtn_SelectExp" onclick="selectExpert(this)">Expert: I've been taking care of snakes for a while now.</button>
+        
     </body>
 </html>

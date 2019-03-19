@@ -1,4 +1,60 @@
 var choiceOne;
+var beginner = false;
+var intermediate = false;
+var expert = false;
+
+function selectBeginner(obj){
+    obj.style.backgroundColor = "lightgrey";
+    obj.style.border = "1px solid black";
+    
+    beginner = true;
+    intermediate = false;
+    expert = false;
+    
+    var otherBtn = document.getElementsByClassName("quizBtn_SelectExp");
+    otherBtn[1].style.backgroundColor = "white";
+    otherBtn[1].style.border = "none";
+    otherBtn[2].style.backgroundColor = "white";
+    otherBtn[2].style.border = "none";
+    
+    document.getElementById("next_Two").style.display = "initial";
+}
+
+function selectIntermediate(obj){
+    obj.style.backgroundColor = "lightgrey";
+    obj.style.border = "1px solid black";
+    
+    beginner = false;
+    intermediate = true;
+    expert = false;
+    
+    var otherBtn = document.getElementsByClassName("quizBtn_SelectExp");
+    otherBtn[0].style.backgroundColor = "white";
+    otherBtn[0].style.border = "none";
+    otherBtn[2].style.backgroundColor = "white";
+    otherBtn[2].style.border = "none";
+    
+    document.getElementById("next_Two").style.display = "initial";
+}
+
+function selectExpert(obj){
+    obj.style.backgroundColor = "lightgrey";
+    obj.style.border = "1px solid black";
+    
+    beginner = false;
+    intermediate = false;
+    expert = true;
+    
+    var otherBtn = document.getElementsByClassName("quizBtn_SelectExp");
+    otherBtn[1].style.backgroundColor = "white";
+    otherBtn[1].style.border = "none";
+    otherBtn[0].style.backgroundColor = "white";
+    otherBtn[0].style.border = "none";
+    
+    document.getElementById("next_Two").style.display = "initial";
+}
+
+
 function selectOptOne(obj) {
     obj.style.backgroundColor = "lightgrey";
     obj.style.border = "1px solid black";
