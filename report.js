@@ -1,4 +1,3 @@
-
 function generateReport() {
     var data = [];
     for (var i = 0; i < localStorage.length; i++){
@@ -20,5 +19,5 @@ function generateReport() {
             count++;
         }
     }
-    console.log(count);
+    document.getElementById("title").innerHTML = "Punchlist Report - " + count + " items";
 }
