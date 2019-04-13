@@ -1,12 +1,3 @@
-var plazaDataOne;
-var plazaDataTwo;
-var plazaDataThree;
-var plazaDataFour;
-var plazaDataFive;
-var plazaDataSix;
-var plazaDataSeven;
-var plazaDataEight;
-
 localStorage.clear();
 
 function display(){
@@ -47,21 +38,51 @@ function callPlaza(){
     getPlazaTodosSix();
     getPlazaTodosSeven();
     getPlazaTodosEight();
+    
+    var btn = document.getElementById("btn-hidden");
+    btn.style.opacity = "1";
+}
+
+function callBigby(){
+    getBigbyTodos();
+    getBigbyTodosTwo();
+    
+    var btn = document.getElementById("btn-hidden");
+    btn.style.opacity = "1";
+}
+
+function callWestgate(){
+    getWestgateTodos();
+    getWestgateTodosTwo();
+    
+    var btn = document.getElementById("btn-hidden");
+    btn.style.opacity = "1";
+}
+
+function callWalnut() {
+    getWalnutTodos();
+    getWalnutTodosTwo();
+    getWalnutTodosThree();
+    getWalnutTodosFour();
+    
+    var btn = document.getElementById("btn-hidden");
+    btn.style.opacity = "1";
 }
 
 function getPlazaTodos() {
     
     var xmlHttp = new XMLHttpRequest();
-    
     var url = "https://3.basecampapi.com/4191003/projects/recordings.json?type=Todo&bucket=11349404&access_token=BAhbB0kiAbB7ImNsaWVudF9pZCI6IjBmN2U2NjJlMTZkNmMyMDNmOGYyZWFlOWQ3ZTZjYzU4NTRkNDYyMGQiLCJleHBpcmVzX2F0IjoiMjAxOS0wNC0yNVQyMTozNDo1OVoiLCJ1c2VyX2lkcyI6WzM5MTQ3Mzk5XSwidmVyc2lvbiI6MSwiYXBpX2RlYWRib2x0IjoiZWRlNThiNDk4MDhkNmFlMTQ2YjcyMDkzNjNlNGRjNDkifQY6BkVUSXU6CVRpbWUNNc8dwMiVtIsJOg1uYW5vX251bWkCUQE6DW5hbm9fZGVuaQY6DXN1Ym1pY3JvIgczcDoJem9uZUkiCFVUQwY7AEY=--2397b353eb46b3b3a25f9a8f3fe99ea9fb49534b";
-
+    xmlHttp.open("GET", url, true);
     xmlHttp.onreadystatechange = function () {
       
         if (this.status === 200){
             localStorage.setItem("PlazaOne", this.response);
         }
     };
-    xmlHttp.open("GET", url, true);
+    
+    //xmlHttp.setRequestHeader('Content-Type', 'application/json');
+    //xmlHttp.withCredentials = true;
     xmlHttp.send();
 }
 function getPlazaTodosTwo() {
@@ -182,13 +203,22 @@ function getBigbyTodos() {
     xmlHttp.onreadystatechange = function () {
       
         if (this.status === 200){
-            var data = JSON.parse(this.response);
-            for (var i = 0; i < data.length; i++){
-                console.log("Item: " + data[i].title);
-                console.log("Unit: " + data[i].parent.title);
-                console.log("Completed?: " + data[i].completed); 
-                console.log("////////////");
-            } 
+            localStorage.setItem("BigbyOne", this.response);
+        }
+    };
+    
+    xmlHttp.open("GET", url, true);
+    xmlHttp.send();
+}
+function getBigbyTodosTwo() {
+    
+    var xmlHttp = new XMLHttpRequest();
+    var url = "https://3.basecampapi.com/4191003/projects/recordings.json?type=Todo&bucket=11348667&page=2&access_token=BAhbB0kiAbB7ImNsaWVudF9pZCI6IjBmN2U2NjJlMTZkNmMyMDNmOGYyZWFlOWQ3ZTZjYzU4NTRkNDYyMGQiLCJleHBpcmVzX2F0IjoiMjAxOS0wNC0yNVQyMTozNDo1OVoiLCJ1c2VyX2lkcyI6WzM5MTQ3Mzk5XSwidmVyc2lvbiI6MSwiYXBpX2RlYWRib2x0IjoiZWRlNThiNDk4MDhkNmFlMTQ2YjcyMDkzNjNlNGRjNDkifQY6BkVUSXU6CVRpbWUNNc8dwMiVtIsJOg1uYW5vX251bWkCUQE6DW5hbm9fZGVuaQY6DXN1Ym1pY3JvIgczcDoJem9uZUkiCFVUQwY7AEY=--2397b353eb46b3b3a25f9a8f3fe99ea9fb49534b";
+
+    xmlHttp.onreadystatechange = function () {
+      
+        if (this.status === 200){
+            localStorage.setItem("BigbyTwo", this.response);
         }
     };
     
@@ -204,13 +234,22 @@ function getWestgateTodos() {
     xmlHttp.onreadystatechange = function () {
       
         if (this.status === 200){
-            var data = JSON.parse(this.response);
-            for (var i = 0; i < data.length; i++){
-                console.log("Item: " + data[i].title);
-                console.log("Unit: " + data[i].parent.title);
-                console.log("Completed?: " + data[i].completed); 
-                console.log("////////////");
-            } 
+            localStorage.setItem("WestgateOne", this.response); 
+        }
+    };
+    
+    xmlHttp.open("GET", url, true);
+    xmlHttp.send();
+}
+function getWestgateTodosTwo() {
+    
+    var xmlHttp = new XMLHttpRequest();
+    var url = "https://3.basecampapi.com/4191003/projects/recordings.json?type=Todo&bucket=11348677&page=2&access_token=BAhbB0kiAbB7ImNsaWVudF9pZCI6IjBmN2U2NjJlMTZkNmMyMDNmOGYyZWFlOWQ3ZTZjYzU4NTRkNDYyMGQiLCJleHBpcmVzX2F0IjoiMjAxOS0wNC0yNVQyMTozNDo1OVoiLCJ1c2VyX2lkcyI6WzM5MTQ3Mzk5XSwidmVyc2lvbiI6MSwiYXBpX2RlYWRib2x0IjoiZWRlNThiNDk4MDhkNmFlMTQ2YjcyMDkzNjNlNGRjNDkifQY6BkVUSXU6CVRpbWUNNc8dwMiVtIsJOg1uYW5vX251bWkCUQE6DW5hbm9fZGVuaQY6DXN1Ym1pY3JvIgczcDoJem9uZUkiCFVUQwY7AEY=--2397b353eb46b3b3a25f9a8f3fe99ea9fb49534b";
+
+    xmlHttp.onreadystatechange = function () {
+      
+        if (this.status === 200){
+            localStorage.setItem("WestgateTwo", this.response);
         }
     };
     
@@ -226,13 +265,52 @@ function getWalnutTodos() {
     xmlHttp.onreadystatechange = function () {
       
         if (this.status === 200){
-            var data = JSON.parse(this.response);
-            for (var i = 0; i < data.length; i++){
-                console.log("Item: " + data[i].title);
-                console.log("Unit: " + data[i].parent.title);
-                console.log("Completed?: " + data[i].completed); 
-                console.log("////////////");
-            } 
+            localStorage.setItem("WalnutOne", this.response);
+        }
+    };
+    
+    xmlHttp.open("GET", url, true);
+    xmlHttp.send();
+}
+function getWalnutTodosTwo() {
+    
+    var xmlHttp = new XMLHttpRequest();
+    var url = "https://3.basecampapi.com/4191003/projects/recordings.json?type=Todo&bucket=11348681&page=2&access_token=BAhbB0kiAbB7ImNsaWVudF9pZCI6IjBmN2U2NjJlMTZkNmMyMDNmOGYyZWFlOWQ3ZTZjYzU4NTRkNDYyMGQiLCJleHBpcmVzX2F0IjoiMjAxOS0wNC0yNVQyMTozNDo1OVoiLCJ1c2VyX2lkcyI6WzM5MTQ3Mzk5XSwidmVyc2lvbiI6MSwiYXBpX2RlYWRib2x0IjoiZWRlNThiNDk4MDhkNmFlMTQ2YjcyMDkzNjNlNGRjNDkifQY6BkVUSXU6CVRpbWUNNc8dwMiVtIsJOg1uYW5vX251bWkCUQE6DW5hbm9fZGVuaQY6DXN1Ym1pY3JvIgczcDoJem9uZUkiCFVUQwY7AEY=--2397b353eb46b3b3a25f9a8f3fe99ea9fb49534b";
+
+    xmlHttp.onreadystatechange = function () {
+      
+        if (this.status === 200){
+            localStorage.setItem("WalnutTwo", this.response);
+        }
+    };
+    
+    xmlHttp.open("GET", url, true);
+    xmlHttp.send();
+}
+function getWalnutTodosThree() {
+    
+    var xmlHttp = new XMLHttpRequest();
+    var url = "https://3.basecampapi.com/4191003/projects/recordings.json?type=Todo&bucket=11348681&page=3&access_token=BAhbB0kiAbB7ImNsaWVudF9pZCI6IjBmN2U2NjJlMTZkNmMyMDNmOGYyZWFlOWQ3ZTZjYzU4NTRkNDYyMGQiLCJleHBpcmVzX2F0IjoiMjAxOS0wNC0yNVQyMTozNDo1OVoiLCJ1c2VyX2lkcyI6WzM5MTQ3Mzk5XSwidmVyc2lvbiI6MSwiYXBpX2RlYWRib2x0IjoiZWRlNThiNDk4MDhkNmFlMTQ2YjcyMDkzNjNlNGRjNDkifQY6BkVUSXU6CVRpbWUNNc8dwMiVtIsJOg1uYW5vX251bWkCUQE6DW5hbm9fZGVuaQY6DXN1Ym1pY3JvIgczcDoJem9uZUkiCFVUQwY7AEY=--2397b353eb46b3b3a25f9a8f3fe99ea9fb49534b";
+
+    xmlHttp.onreadystatechange = function () {
+      
+        if (this.status === 200){
+            localStorage.setItem("WalnutThree", this.response);
+        }
+    };
+    
+    xmlHttp.open("GET", url, true);
+    xmlHttp.send();
+}
+function getWalnutTodosFour() {
+    
+    var xmlHttp = new XMLHttpRequest();
+    var url = "https://3.basecampapi.com/4191003/projects/recordings.json?type=Todo&bucket=11348681&page=4&access_token=BAhbB0kiAbB7ImNsaWVudF9pZCI6IjBmN2U2NjJlMTZkNmMyMDNmOGYyZWFlOWQ3ZTZjYzU4NTRkNDYyMGQiLCJleHBpcmVzX2F0IjoiMjAxOS0wNC0yNVQyMTozNDo1OVoiLCJ1c2VyX2lkcyI6WzM5MTQ3Mzk5XSwidmVyc2lvbiI6MSwiYXBpX2RlYWRib2x0IjoiZWRlNThiNDk4MDhkNmFlMTQ2YjcyMDkzNjNlNGRjNDkifQY6BkVUSXU6CVRpbWUNNc8dwMiVtIsJOg1uYW5vX251bWkCUQE6DW5hbm9fZGVuaQY6DXN1Ym1pY3JvIgczcDoJem9uZUkiCFVUQwY7AEY=--2397b353eb46b3b3a25f9a8f3fe99ea9fb49534b";
+
+    xmlHttp.onreadystatechange = function () {
+      
+        if (this.status === 200){
+            localStorage.setItem("WalnutFour", this.response);
         }
     };
     

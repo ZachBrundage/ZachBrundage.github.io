@@ -3,19 +3,20 @@
     <head>
         <title> CS 261 Final </title>
         <link rel="stylesheet" href="style.css">
+        <link rel="stylesheet" href="basecamp.css">
         <script type="text/javascript" src="basecamp.js"></script>
     </head>
     <body>
         <div id="header"> Projects - Basic Fluency</div>
         <div class="row">
             <div class="containerCenter">
-                <div id="display"></div><br>
-                <button onclick="callPlaza()">Plaza</button>
-                <button onclick="getBigbyTodos()">Bigby</button>
-                <button onclick="getWestgateTodos()">Westgate</button>
-                <button onclick="getWalnutTodos()">Walnut Creek</button><br><br>
-                <button onclick="display()">Display Local Storage</button>
-                <button onclick="window.location.href = 'report.html'">Format</button>
+                <h1>Format Punchlist Data From Basecamp</h1>
+                <h2>Select Your Project</h2>
+                <button onclick="callPlaza()">Plaza</button><br><br>
+                <button onclick="callBigby()">Bigby</button><br><br>
+                <button onclick="callWestgate()">Westgate</button><br><br>
+                <button onclick="callWalnut()">Walnut Creek</button><br><br>
+                <button onclick="window.location.href = 'report.html'" id="btn-hidden">Format</button>
             </div>
         </div><br><br>
         <div class="spacer">
