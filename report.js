@@ -1,8 +1,17 @@
 function generateReport() {
+    // Pull data from local storage
+    // Store in array of objects
     var data = [];
     for (var i = 0; i < localStorage.length; i++){
         data[i] = JSON.parse(localStorage.getItem(localStorage.key(i)));
     }
+    /* Sort Data by Subcontractor
+    var sorted = sortBySub(data);
+    console.log("SORTED:");
+    console.log(sorted);
+    */
+    
+    // Generate HTML table for each ToDo
     var count = 0;
     for (let text of data){
         for (var j = 0; j < text.length; j++){

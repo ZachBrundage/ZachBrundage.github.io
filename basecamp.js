@@ -1,5 +1,7 @@
 localStorage.clear();
 
+var accessToken = "access_token=BAhbB0kiAbB7ImNsaWVudF9pZCI6IjBmN2U2NjJlMTZkNmMyMDNmOGYyZWFlOWQ3ZTZjYzU4NTRkNDYyMGQiLCJleHBpcmVzX2F0IjoiMjAxOS0wNi0wNVQyMTo0NTo0M1oiLCJ1c2VyX2lkcyI6WzM5MTQ3Mzk5XSwidmVyc2lvbiI6MSwiYXBpX2RlYWRib2x0IjoiZWRlNThiNDk4MDhkNmFlMTQ2YjcyMDkzNjNlNGRjNDkifQY6BkVUSXU6CVRpbWUNtdQdwEuNubYJOg1uYW5vX251bWkCGQM6DW5hbm9fZGVuaQY6DXN1Ym1pY3JvIgd5MDoJem9uZUkiCFVUQwY7AEY=--2dbe47179509ede01353b354350b6eb8a6f2f61c";
+
 function display(){
     var str01 = localStorage.getItem("PlazaOne");
     var str02 = localStorage.getItem("PlazaTwo");
@@ -72,7 +74,7 @@ function callWalnut() {
 function getPlazaTodos() {
     
     var xmlHttp = new XMLHttpRequest();
-    var url = "https://3.basecampapi.com/4191003/projects/recordings.json?type=Todo&bucket=11349404&access_token=BAhbB0kiAbB7ImNsaWVudF9pZCI6IjBmN2U2NjJlMTZkNmMyMDNmOGYyZWFlOWQ3ZTZjYzU4NTRkNDYyMGQiLCJleHBpcmVzX2F0IjoiMjAxOS0wNC0yNVQyMTozNDo1OVoiLCJ1c2VyX2lkcyI6WzM5MTQ3Mzk5XSwidmVyc2lvbiI6MSwiYXBpX2RlYWRib2x0IjoiZWRlNThiNDk4MDhkNmFlMTQ2YjcyMDkzNjNlNGRjNDkifQY6BkVUSXU6CVRpbWUNNc8dwMiVtIsJOg1uYW5vX251bWkCUQE6DW5hbm9fZGVuaQY6DXN1Ym1pY3JvIgczcDoJem9uZUkiCFVUQwY7AEY=--2397b353eb46b3b3a25f9a8f3fe99ea9fb49534b";
+    var url = "https://3.basecampapi.com/4191003/projects/recordings.json?type=Todo&bucket=11349404&" + accessToken;
     xmlHttp.open("GET", url, true);
     xmlHttp.onreadystatechange = function () {
       
@@ -89,7 +91,7 @@ function getPlazaTodosTwo() {
     
     var xmlHttp = new XMLHttpRequest();
     
-    var url = "https://3.basecampapi.com/4191003/projects/recordings.json?type=Todo&bucket=11349404&page=2&access_token=BAhbB0kiAbB7ImNsaWVudF9pZCI6IjBmN2U2NjJlMTZkNmMyMDNmOGYyZWFlOWQ3ZTZjYzU4NTRkNDYyMGQiLCJleHBpcmVzX2F0IjoiMjAxOS0wNC0yNVQyMTozNDo1OVoiLCJ1c2VyX2lkcyI6WzM5MTQ3Mzk5XSwidmVyc2lvbiI6MSwiYXBpX2RlYWRib2x0IjoiZWRlNThiNDk4MDhkNmFlMTQ2YjcyMDkzNjNlNGRjNDkifQY6BkVUSXU6CVRpbWUNNc8dwMiVtIsJOg1uYW5vX251bWkCUQE6DW5hbm9fZGVuaQY6DXN1Ym1pY3JvIgczcDoJem9uZUkiCFVUQwY7AEY=--2397b353eb46b3b3a25f9a8f3fe99ea9fb49534b";
+    var url = "https://3.basecampapi.com/4191003/projects/recordings.json?type=Todo&bucket=11349404&page=2&" + accessToken;
 
     xmlHttp.onreadystatechange = function () {
       
@@ -104,7 +106,7 @@ function getPlazaTodosThree() {
     
     var xmlHttp = new XMLHttpRequest();
     
-    var url = "https://3.basecampapi.com/4191003/projects/recordings.json?type=Todo&bucket=11349404&page=3&access_token=BAhbB0kiAbB7ImNsaWVudF9pZCI6IjBmN2U2NjJlMTZkNmMyMDNmOGYyZWFlOWQ3ZTZjYzU4NTRkNDYyMGQiLCJleHBpcmVzX2F0IjoiMjAxOS0wNC0yNVQyMTozNDo1OVoiLCJ1c2VyX2lkcyI6WzM5MTQ3Mzk5XSwidmVyc2lvbiI6MSwiYXBpX2RlYWRib2x0IjoiZWRlNThiNDk4MDhkNmFlMTQ2YjcyMDkzNjNlNGRjNDkifQY6BkVUSXU6CVRpbWUNNc8dwMiVtIsJOg1uYW5vX251bWkCUQE6DW5hbm9fZGVuaQY6DXN1Ym1pY3JvIgczcDoJem9uZUkiCFVUQwY7AEY=--2397b353eb46b3b3a25f9a8f3fe99ea9fb49534b";
+    var url = "https://3.basecampapi.com/4191003/projects/recordings.json?type=Todo&bucket=11349404&page=3&" + accessToken;
 
     xmlHttp.onreadystatechange = function () {
       
@@ -119,7 +121,7 @@ function getPlazaTodosFour() {
     
     var xmlHttp = new XMLHttpRequest();
     
-    var url = "https://3.basecampapi.com/4191003/projects/recordings.json?type=Todo&bucket=11349404&page=4&access_token=BAhbB0kiAbB7ImNsaWVudF9pZCI6IjBmN2U2NjJlMTZkNmMyMDNmOGYyZWFlOWQ3ZTZjYzU4NTRkNDYyMGQiLCJleHBpcmVzX2F0IjoiMjAxOS0wNC0yNVQyMTozNDo1OVoiLCJ1c2VyX2lkcyI6WzM5MTQ3Mzk5XSwidmVyc2lvbiI6MSwiYXBpX2RlYWRib2x0IjoiZWRlNThiNDk4MDhkNmFlMTQ2YjcyMDkzNjNlNGRjNDkifQY6BkVUSXU6CVRpbWUNNc8dwMiVtIsJOg1uYW5vX251bWkCUQE6DW5hbm9fZGVuaQY6DXN1Ym1pY3JvIgczcDoJem9uZUkiCFVUQwY7AEY=--2397b353eb46b3b3a25f9a8f3fe99ea9fb49534b";
+    var url = "https://3.basecampapi.com/4191003/projects/recordings.json?type=Todo&bucket=11349404&page=4&" + accessToken;
 
     xmlHttp.onreadystatechange = function () {
       
@@ -135,7 +137,7 @@ function getPlazaTodosFive() {
     
     var xmlHttp = new XMLHttpRequest();
     
-    var url = "https://3.basecampapi.com/4191003/projects/recordings.json?type=Todo&bucket=11349404&page=5&access_token=BAhbB0kiAbB7ImNsaWVudF9pZCI6IjBmN2U2NjJlMTZkNmMyMDNmOGYyZWFlOWQ3ZTZjYzU4NTRkNDYyMGQiLCJleHBpcmVzX2F0IjoiMjAxOS0wNC0yNVQyMTozNDo1OVoiLCJ1c2VyX2lkcyI6WzM5MTQ3Mzk5XSwidmVyc2lvbiI6MSwiYXBpX2RlYWRib2x0IjoiZWRlNThiNDk4MDhkNmFlMTQ2YjcyMDkzNjNlNGRjNDkifQY6BkVUSXU6CVRpbWUNNc8dwMiVtIsJOg1uYW5vX251bWkCUQE6DW5hbm9fZGVuaQY6DXN1Ym1pY3JvIgczcDoJem9uZUkiCFVUQwY7AEY=--2397b353eb46b3b3a25f9a8f3fe99ea9fb49534b";
+    var url = "https://3.basecampapi.com/4191003/projects/recordings.json?type=Todo&bucket=11349404&page=5&" + accessToken;
 
     xmlHttp.onreadystatechange = function () {
       
@@ -150,7 +152,7 @@ function getPlazaTodosSix() {
     
     var xmlHttp = new XMLHttpRequest();
     
-    var url = "https://3.basecampapi.com/4191003/projects/recordings.json?type=Todo&bucket=11349404&page=6&access_token=BAhbB0kiAbB7ImNsaWVudF9pZCI6IjBmN2U2NjJlMTZkNmMyMDNmOGYyZWFlOWQ3ZTZjYzU4NTRkNDYyMGQiLCJleHBpcmVzX2F0IjoiMjAxOS0wNC0yNVQyMTozNDo1OVoiLCJ1c2VyX2lkcyI6WzM5MTQ3Mzk5XSwidmVyc2lvbiI6MSwiYXBpX2RlYWRib2x0IjoiZWRlNThiNDk4MDhkNmFlMTQ2YjcyMDkzNjNlNGRjNDkifQY6BkVUSXU6CVRpbWUNNc8dwMiVtIsJOg1uYW5vX251bWkCUQE6DW5hbm9fZGVuaQY6DXN1Ym1pY3JvIgczcDoJem9uZUkiCFVUQwY7AEY=--2397b353eb46b3b3a25f9a8f3fe99ea9fb49534b";
+    var url = "https://3.basecampapi.com/4191003/projects/recordings.json?type=Todo&bucket=11349404&page=6&" + accessToken;
 
     xmlHttp.onreadystatechange = function () {
       
@@ -166,7 +168,7 @@ function getPlazaTodosSeven() {
     
     var xmlHttp = new XMLHttpRequest();
     
-    var url = "https://3.basecampapi.com/4191003/projects/recordings.json?type=Todo&bucket=11349404&page=7&access_token=BAhbB0kiAbB7ImNsaWVudF9pZCI6IjBmN2U2NjJlMTZkNmMyMDNmOGYyZWFlOWQ3ZTZjYzU4NTRkNDYyMGQiLCJleHBpcmVzX2F0IjoiMjAxOS0wNC0yNVQyMTozNDo1OVoiLCJ1c2VyX2lkcyI6WzM5MTQ3Mzk5XSwidmVyc2lvbiI6MSwiYXBpX2RlYWRib2x0IjoiZWRlNThiNDk4MDhkNmFlMTQ2YjcyMDkzNjNlNGRjNDkifQY6BkVUSXU6CVRpbWUNNc8dwMiVtIsJOg1uYW5vX251bWkCUQE6DW5hbm9fZGVuaQY6DXN1Ym1pY3JvIgczcDoJem9uZUkiCFVUQwY7AEY=--2397b353eb46b3b3a25f9a8f3fe99ea9fb49534b";
+    var url = "https://3.basecampapi.com/4191003/projects/recordings.json?type=Todo&bucket=11349404&page=7&" + accessToken;
 
     xmlHttp.onreadystatechange = function () {
       
@@ -182,7 +184,7 @@ function getPlazaTodosEight() {
     
     var xmlHttp = new XMLHttpRequest();
     
-    var url = "https://3.basecampapi.com/4191003/projects/recordings.json?type=Todo&bucket=11349404&page=8&access_token=BAhbB0kiAbB7ImNsaWVudF9pZCI6IjBmN2U2NjJlMTZkNmMyMDNmOGYyZWFlOWQ3ZTZjYzU4NTRkNDYyMGQiLCJleHBpcmVzX2F0IjoiMjAxOS0wNC0yNVQyMTozNDo1OVoiLCJ1c2VyX2lkcyI6WzM5MTQ3Mzk5XSwidmVyc2lvbiI6MSwiYXBpX2RlYWRib2x0IjoiZWRlNThiNDk4MDhkNmFlMTQ2YjcyMDkzNjNlNGRjNDkifQY6BkVUSXU6CVRpbWUNNc8dwMiVtIsJOg1uYW5vX251bWkCUQE6DW5hbm9fZGVuaQY6DXN1Ym1pY3JvIgczcDoJem9uZUkiCFVUQwY7AEY=--2397b353eb46b3b3a25f9a8f3fe99ea9fb49534b";
+    var url = "https://3.basecampapi.com/4191003/projects/recordings.json?type=Todo&bucket=11349404&page=8&" + accessToken;
 
     xmlHttp.onreadystatechange = function () {
       
@@ -198,7 +200,7 @@ function getPlazaTodosEight() {
 function getBigbyTodos() {
     
     var xmlHttp = new XMLHttpRequest();
-    var url = "https://3.basecampapi.com/4191003/projects/recordings.json?type=Todo&bucket=11348667&access_token=BAhbB0kiAbB7ImNsaWVudF9pZCI6IjBmN2U2NjJlMTZkNmMyMDNmOGYyZWFlOWQ3ZTZjYzU4NTRkNDYyMGQiLCJleHBpcmVzX2F0IjoiMjAxOS0wNC0yNVQyMTozNDo1OVoiLCJ1c2VyX2lkcyI6WzM5MTQ3Mzk5XSwidmVyc2lvbiI6MSwiYXBpX2RlYWRib2x0IjoiZWRlNThiNDk4MDhkNmFlMTQ2YjcyMDkzNjNlNGRjNDkifQY6BkVUSXU6CVRpbWUNNc8dwMiVtIsJOg1uYW5vX251bWkCUQE6DW5hbm9fZGVuaQY6DXN1Ym1pY3JvIgczcDoJem9uZUkiCFVUQwY7AEY=--2397b353eb46b3b3a25f9a8f3fe99ea9fb49534b";
+    var url = "https://3.basecampapi.com/4191003/projects/recordings.json?type=Todo&bucket=11348667&" + accessToken;
 
     xmlHttp.onreadystatechange = function () {
       
@@ -213,7 +215,7 @@ function getBigbyTodos() {
 function getBigbyTodosTwo() {
     
     var xmlHttp = new XMLHttpRequest();
-    var url = "https://3.basecampapi.com/4191003/projects/recordings.json?type=Todo&bucket=11348667&page=2&access_token=BAhbB0kiAbB7ImNsaWVudF9pZCI6IjBmN2U2NjJlMTZkNmMyMDNmOGYyZWFlOWQ3ZTZjYzU4NTRkNDYyMGQiLCJleHBpcmVzX2F0IjoiMjAxOS0wNC0yNVQyMTozNDo1OVoiLCJ1c2VyX2lkcyI6WzM5MTQ3Mzk5XSwidmVyc2lvbiI6MSwiYXBpX2RlYWRib2x0IjoiZWRlNThiNDk4MDhkNmFlMTQ2YjcyMDkzNjNlNGRjNDkifQY6BkVUSXU6CVRpbWUNNc8dwMiVtIsJOg1uYW5vX251bWkCUQE6DW5hbm9fZGVuaQY6DXN1Ym1pY3JvIgczcDoJem9uZUkiCFVUQwY7AEY=--2397b353eb46b3b3a25f9a8f3fe99ea9fb49534b";
+    var url = "https://3.basecampapi.com/4191003/projects/recordings.json?type=Todo&bucket=11348667&page=2&" + accessToken;
 
     xmlHttp.onreadystatechange = function () {
       
@@ -229,7 +231,7 @@ function getBigbyTodosTwo() {
 function getWestgateTodos() {
     
     var xmlHttp = new XMLHttpRequest();
-    var url = "https://3.basecampapi.com/4191003/projects/recordings.json?type=Todo&bucket=11348677&access_token=BAhbB0kiAbB7ImNsaWVudF9pZCI6IjBmN2U2NjJlMTZkNmMyMDNmOGYyZWFlOWQ3ZTZjYzU4NTRkNDYyMGQiLCJleHBpcmVzX2F0IjoiMjAxOS0wNC0yNVQyMTozNDo1OVoiLCJ1c2VyX2lkcyI6WzM5MTQ3Mzk5XSwidmVyc2lvbiI6MSwiYXBpX2RlYWRib2x0IjoiZWRlNThiNDk4MDhkNmFlMTQ2YjcyMDkzNjNlNGRjNDkifQY6BkVUSXU6CVRpbWUNNc8dwMiVtIsJOg1uYW5vX251bWkCUQE6DW5hbm9fZGVuaQY6DXN1Ym1pY3JvIgczcDoJem9uZUkiCFVUQwY7AEY=--2397b353eb46b3b3a25f9a8f3fe99ea9fb49534b";
+    var url = "https://3.basecampapi.com/4191003/projects/recordings.json?type=Todo&bucket=11348677&" + accessToken;
 
     xmlHttp.onreadystatechange = function () {
       
@@ -244,7 +246,7 @@ function getWestgateTodos() {
 function getWestgateTodosTwo() {
     
     var xmlHttp = new XMLHttpRequest();
-    var url = "https://3.basecampapi.com/4191003/projects/recordings.json?type=Todo&bucket=11348677&page=2&access_token=BAhbB0kiAbB7ImNsaWVudF9pZCI6IjBmN2U2NjJlMTZkNmMyMDNmOGYyZWFlOWQ3ZTZjYzU4NTRkNDYyMGQiLCJleHBpcmVzX2F0IjoiMjAxOS0wNC0yNVQyMTozNDo1OVoiLCJ1c2VyX2lkcyI6WzM5MTQ3Mzk5XSwidmVyc2lvbiI6MSwiYXBpX2RlYWRib2x0IjoiZWRlNThiNDk4MDhkNmFlMTQ2YjcyMDkzNjNlNGRjNDkifQY6BkVUSXU6CVRpbWUNNc8dwMiVtIsJOg1uYW5vX251bWkCUQE6DW5hbm9fZGVuaQY6DXN1Ym1pY3JvIgczcDoJem9uZUkiCFVUQwY7AEY=--2397b353eb46b3b3a25f9a8f3fe99ea9fb49534b";
+    var url = "https://3.basecampapi.com/4191003/projects/recordings.json?type=Todo&bucket=11348677&page=2&" + accessToken;
 
     xmlHttp.onreadystatechange = function () {
       
@@ -260,7 +262,7 @@ function getWestgateTodosTwo() {
 function getWalnutTodos() {
     
     var xmlHttp = new XMLHttpRequest();
-    var url = "https://3.basecampapi.com/4191003/projects/recordings.json?type=Todo&bucket=11348681&access_token=BAhbB0kiAbB7ImNsaWVudF9pZCI6IjBmN2U2NjJlMTZkNmMyMDNmOGYyZWFlOWQ3ZTZjYzU4NTRkNDYyMGQiLCJleHBpcmVzX2F0IjoiMjAxOS0wNC0yNVQyMTozNDo1OVoiLCJ1c2VyX2lkcyI6WzM5MTQ3Mzk5XSwidmVyc2lvbiI6MSwiYXBpX2RlYWRib2x0IjoiZWRlNThiNDk4MDhkNmFlMTQ2YjcyMDkzNjNlNGRjNDkifQY6BkVUSXU6CVRpbWUNNc8dwMiVtIsJOg1uYW5vX251bWkCUQE6DW5hbm9fZGVuaQY6DXN1Ym1pY3JvIgczcDoJem9uZUkiCFVUQwY7AEY=--2397b353eb46b3b3a25f9a8f3fe99ea9fb49534b";
+    var url = "https://3.basecampapi.com/4191003/projects/recordings.json?type=Todo&bucket=11348681&" + accessToken;
 
     xmlHttp.onreadystatechange = function () {
       
@@ -275,7 +277,7 @@ function getWalnutTodos() {
 function getWalnutTodosTwo() {
     
     var xmlHttp = new XMLHttpRequest();
-    var url = "https://3.basecampapi.com/4191003/projects/recordings.json?type=Todo&bucket=11348681&page=2&access_token=BAhbB0kiAbB7ImNsaWVudF9pZCI6IjBmN2U2NjJlMTZkNmMyMDNmOGYyZWFlOWQ3ZTZjYzU4NTRkNDYyMGQiLCJleHBpcmVzX2F0IjoiMjAxOS0wNC0yNVQyMTozNDo1OVoiLCJ1c2VyX2lkcyI6WzM5MTQ3Mzk5XSwidmVyc2lvbiI6MSwiYXBpX2RlYWRib2x0IjoiZWRlNThiNDk4MDhkNmFlMTQ2YjcyMDkzNjNlNGRjNDkifQY6BkVUSXU6CVRpbWUNNc8dwMiVtIsJOg1uYW5vX251bWkCUQE6DW5hbm9fZGVuaQY6DXN1Ym1pY3JvIgczcDoJem9uZUkiCFVUQwY7AEY=--2397b353eb46b3b3a25f9a8f3fe99ea9fb49534b";
+    var url = "https://3.basecampapi.com/4191003/projects/recordings.json?type=Todo&bucket=11348681&page=2&" + accessToken;
 
     xmlHttp.onreadystatechange = function () {
       
@@ -290,7 +292,7 @@ function getWalnutTodosTwo() {
 function getWalnutTodosThree() {
     
     var xmlHttp = new XMLHttpRequest();
-    var url = "https://3.basecampapi.com/4191003/projects/recordings.json?type=Todo&bucket=11348681&page=3&access_token=BAhbB0kiAbB7ImNsaWVudF9pZCI6IjBmN2U2NjJlMTZkNmMyMDNmOGYyZWFlOWQ3ZTZjYzU4NTRkNDYyMGQiLCJleHBpcmVzX2F0IjoiMjAxOS0wNC0yNVQyMTozNDo1OVoiLCJ1c2VyX2lkcyI6WzM5MTQ3Mzk5XSwidmVyc2lvbiI6MSwiYXBpX2RlYWRib2x0IjoiZWRlNThiNDk4MDhkNmFlMTQ2YjcyMDkzNjNlNGRjNDkifQY6BkVUSXU6CVRpbWUNNc8dwMiVtIsJOg1uYW5vX251bWkCUQE6DW5hbm9fZGVuaQY6DXN1Ym1pY3JvIgczcDoJem9uZUkiCFVUQwY7AEY=--2397b353eb46b3b3a25f9a8f3fe99ea9fb49534b";
+    var url = "https://3.basecampapi.com/4191003/projects/recordings.json?type=Todo&bucket=11348681&page=3&" + accessToken;
 
     xmlHttp.onreadystatechange = function () {
       
@@ -305,7 +307,7 @@ function getWalnutTodosThree() {
 function getWalnutTodosFour() {
     
     var xmlHttp = new XMLHttpRequest();
-    var url = "https://3.basecampapi.com/4191003/projects/recordings.json?type=Todo&bucket=11348681&page=4&access_token=BAhbB0kiAbB7ImNsaWVudF9pZCI6IjBmN2U2NjJlMTZkNmMyMDNmOGYyZWFlOWQ3ZTZjYzU4NTRkNDYyMGQiLCJleHBpcmVzX2F0IjoiMjAxOS0wNC0yNVQyMTozNDo1OVoiLCJ1c2VyX2lkcyI6WzM5MTQ3Mzk5XSwidmVyc2lvbiI6MSwiYXBpX2RlYWRib2x0IjoiZWRlNThiNDk4MDhkNmFlMTQ2YjcyMDkzNjNlNGRjNDkifQY6BkVUSXU6CVRpbWUNNc8dwMiVtIsJOg1uYW5vX251bWkCUQE6DW5hbm9fZGVuaQY6DXN1Ym1pY3JvIgczcDoJem9uZUkiCFVUQwY7AEY=--2397b353eb46b3b3a25f9a8f3fe99ea9fb49534b";
+    var url = "https://3.basecampapi.com/4191003/projects/recordings.json?type=Todo&bucket=11348681&page=4&" + accessToken;
 
     xmlHttp.onreadystatechange = function () {
       
